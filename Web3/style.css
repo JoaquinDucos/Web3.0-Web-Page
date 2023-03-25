@@ -1,0 +1,593 @@
+/* Estilos generales */
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f3f3f3;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fbfbfb;
+	padding: 20px;
+	margin-bottom: 15px;
+  }
+
+.logo h1 {
+	font-size: 2rem;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	margin: 0;
+  }
+  
+  .logo h1:hover {
+	color: #e83e8c;
+  }
+
+  .logoChain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+  }
+  
+  .logoChain img {
+	max-height: 65px;
+	margin-top: 20px;
+	margin-left: 8px;
+  }
+
+h1 {
+	font-size: 45px;
+	color: #323232;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+	color: #323232;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+p {
+	color: #777777;
+	font-size: 1.45em;
+	line-height: 0.2em;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+button {
+	background-color: #e1e1e1;
+	color: #323232;
+	font-weight: bold;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 50px;
+	padding: 10px 22px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #323232;
+	color: #ffffff;
+}
+
+section {
+	padding-top: 5px;
+	margin-bottom: 25px;
+}
+
+.sectionGal {
+	padding-top: 5px;
+	margin-bottom: 95px;
+}
+
+.botonGaleria {
+	margin-top: 16px;
+	margin-left: 26px;
+}
+/* Estilos de la galería */
+
+.imagen {
+	width: 90px;
+	height: 90px;
+	transition: transform 0.3s;
+}
+.galeria {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.galeria div {
+	width: 280px;
+	height: 220px;
+	margin: 100px;
+}
+
+.galeria img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s;
+	border-radius: 10px;
+
+}
+
+.galeria img:hover {
+	transform: scale(1.12);
+	box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Estilos del formulario */
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+label {
+	color: #323232;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+input, textarea {
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	box-shadow: 0px 0px 5px #323232;
+}
+
+button[type="submit"] {
+	background-color: #323232;
+	color: #ffffff;
+}
+
+/* Estilos de la navegación */
+nav {
+	background-color: #e1e1e1;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	border-radius: 10px; /* Agregamos la propiedad border-radius */
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+nav ul ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 999;
+	display: none;
+  }
+  
+nav li {
+	margin: 0 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+nav a {
+	position: relative;
+	color: #323232;
+	text-decoration: none;
+	font-size: 1.3em;
+	font-weight: bold;
+	transition: color 0.3s;
+  }
+  
+  nav a:hover {
+	color: #777777;
+  }
+  
+  nav a:hover::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 14%;
+	left: -16px;
+	transform: translateY(-80%);
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #777777;
+  }
+  
+
+  nav a::before {
+	/* código anterior */
+	transition: transform 0.3s;
+  }
+  
+  nav a:hover::before {
+	/* código anterior */
+	transform: translateX(-10px);
+  }
+  
+  nav a:active::before {
+	/* código anterior */
+	transform: translateY(3px);
+  }
+
+  .dropdown-menu {
+    display: none;
+    margin: 0;
+    text-align: center;
+    margin-left: 480px;
+	padding-bottom: 8px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #e1e1e1;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+	z-index: 2;
+	  
+  }
+
+  nav ul li.dropdown-menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  }
+  
+  nav ul li.dropdown-menu ul li {
+    margin: 10px 0;
+  }
+  
+  nav ul li.dropdown-menu ul a {
+    color: #333;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  
+#banner {
+	background-image: url('./img/web3.png');
+	background-size: cover;
+	background-position: center;
+	color: #ffffff;
+	padding: 10px 0;
+	text-align: left;
+	position: relative;
+	transition: all 0.3s ease-in-out; /* Agregar transición de 0.3 segundos al hacer hover */
+	border-radius: 10px; /* Agregar un radio de borde de 10px */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra para mejorar la apariencia */
+	padding-top: 15px;
+	
+  }
+
+#banner:hover {
+	transform: translateY(-5px); /* Mover el banner hacia arriba 5px al hacer hover */
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); /* Aumentar la sombra para mejorar la apariencia */
+	border-radius: 20px; /* Aumentar el radio de borde a 20px al hacer hover */
+}
+
+#banner h1 {
+	color: #545454;
+	font-family: sans-serif;
+	font-size: 2.7em;
+	text-align: left;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	opacity: 0; /* Establecer la opacidad en 0 para que el texto esté oculto */
+	transition: opacity 1s ease-in-out; /* Agregar una transición de 1 segundo para que el texto aparezca gradualmente */
+	padding-right: 10px;
+	padding-bottom: 210px ;
+}
+#banner:hover h1 {
+	opacity: 1; /* Establecer la opacidad en 1 al hacer hover para que el texto aparezca */
+}
+
+#banner p {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 1em;
+	margin-bottom: 25px;
+	padding-right: 465px;
+	text-align: center;
+	opacity: 0; /* Establecer la opacidad en 0 para que el texto esté oculto */
+	transition: opacity 1s ease-in-out; /* Agregar una transición de 1 segundo para que el texto aparezca gradualmente */
+}
+
+.pdiv {
+	padding-left: 55px;
+}
+
+.pProd p{
+	margin-top: 20px;
+	font-size: 1.5em;
+	width: 440px;
+	text-align: left;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#banner:hover p {
+	opacity: 1; /* Establecer la opacidad en 1 al hacer hover para que el texto aparezca */
+}
+#banner button {
+	font-size: 1.5em;
+	padding-top: 10px;
+	margin-left: 25px;
+	opacity: 0; /* Establecer la opacidad en 0 para que el texto esté oculto */
+	transition: opacity 1s ease-in-out; /* Agregar una transición de 1 segundo para que el texto aparezca gradualmente */
+	margin-top: 105px;
+	margin-bottom: 5px;
+}
+
+#banner:hover button {
+	opacity: 1; /* Establecer la opacidad en 1 al hacer hover para que el texto aparezca */
+}
+ 
+/* Estilos del botón "Comprar" */
+button.comprar {
+	background-color: #00c853;
+	color: #ffffff;
+}
+
+button.comprar:hover {
+	background-color: #00e676;
+}
+
+#productos {
+	background-color: #f3f3f3;
+	padding: 6px 0;
+}
+
+/* Estilo para la sección "Servicios" */
+#servicios {
+	background-color: #f6f6f6;
+	padding: 80px 0;
+	text-align: center;
+  }
+  
+  /* Estilo para el título "Servicios destacados" */
+  #servicios h1 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #333333;
+	margin-bottom: 30px;
+  }
+  
+  /* Estilo para la clase "Servicio" */
+  .servicio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .servicio div {
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+  }
+  
+  .servicio div:hover {
+	transform: scale(1.1);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .servicio div img {
+	height: 350px;
+	width: 220px;
+	border-radius: 10px;
+	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .servicio div:hover img {
+	transform: scale(1.1);
+  }
+  
+  .servicio div::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .servicio div:hover::before {
+	opacity: 1;
+  }
+  
+  .servicio .prev, .servicio .next {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 50px;
+	width: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	z-index: 1;
+  }
+  
+  .servicio .prev:hover, .servicio .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .servicio .prev {
+	left: 0;
+	margin-left: 20px;
+  }
+  
+  .servicio .next {
+	right: 0;
+	margin-right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+	.servicio div {
+	  width: 100%;
+	}
+  }
+  
+
+/* Estilos del footer */
+footer {
+	background-color: #323232;
+	color: #ffffff;
+	padding: 50px 0;
+}
+
+footer p {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+footer ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer li {
+	margin: 0 20px;
+}
+
+footer a {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+footer a:hover {
+	color: #00c853;
+}
+
+.menu-pestanas {
+	display: flex;	justify-content: center;
+}
+
+.menu-pestanas p {
+	font-size: 1.1em;
+	color: #777777;
+	text-align: center;
+}
+
+  .menu-pestanas button {
+	padding: 8px;
+	margin-left: 7px;
+	background-color: #ccc;
+	border: none;
+	border-radius: 6px 6px 6px 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  .menu-pestanas button:focus {
+	outline: none;
+  }
+  .menu-pestanas button:hover {
+	background-color: #eee;
+  }
+  .pestana {
+	display: none;
+  }
+  .pestana-activa {
+	display: block;
+  }
+
+  #demo {
+	font-family: 'roboto',"sans-serif", monospace;
+	font-size: 5px;
+	text-align: left;
+	padding: 5px;
+  }
+
+  /* Estilo para la sección "Nosotros" */
+#nosotros {
+	background-color: #f2f2f2;
+	padding: 80px 0;
+	text-align: center;
+  }
+  
+  /* Estilo para el título "Nosotros" */
+  #nosotros h2 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #333333;
+	margin-bottom: 30px;
+  }
+  
+  /* Estilo para el texto "Nosotros" */
+  #nosotros p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #666666;
+	margin-bottom: 30px;
+  }
+  
+  /* Estilo para el botón "Conócenos más" */
+  #nosotros button {
+	background-color: #5181a8;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+  }
+  
+  #nosotros button:hover {
+	background-color: #6c9ad3;
+  }
+  
+  
+  
